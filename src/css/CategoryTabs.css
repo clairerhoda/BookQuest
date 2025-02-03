@@ -1,0 +1,95 @@
+.category-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    padding: 0rem 0;
+  }
+  
+  .category-tabs button {
+    letter-spacing: -.45px;
+    background-color: #fff;
+    color: #242b2c;
+    font-size: 1rem;
+    font-weight: 600;
+    transform: scaleY(.92);
+    padding: .5rem .75rem;
+    margin: 0 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .category-tabs button:hover {
+    transform: translateY(-2px) scaleY(.92);
+    color: #000000;
+  }
+
+  
+  /* Sword Slash Animation */
+  .category-tabs button.active {
+    animation: swordSlash 1s ease-out forwards;
+    color: #242b2c;
+    background-color: white;
+    text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+  }
+  
+  /* Sword Slash Keyframes */
+  @keyframes swordSlash {
+    0% {
+      transform: scale(1) scaleY(.85);
+    }
+    10% {
+      transform: scale(1.1) rotate(10deg) scaleY(.85);
+    }
+    30% {
+      transform: scale(1) rotate(0deg) scaleY(.85);
+    }
+  }
+  
+  /* Positioning the Sword Emoji */
+  .sword {
+    position: absolute;
+    z-index: -1;
+    transform: rotate(30deg);
+    animation: swordDrop 0.6s ease-out forwards;
+    pointer-events: none;
+  }
+  
+  /* Sword Drop Effect */
+  @keyframes swordDrop {
+    0% {
+      top: -100%;
+      right: 20%;
+    }
+    10% {
+      top: -50%;
+      right: 20%;
+    }
+    20% {
+      top: 2%;
+      right: 35%;
+    }
+    100% {
+        top: 2%;
+        right: 35%;
+      }
+  }
+
+  
+  @media (max-width: 768px) {
+    .category-tabs {
+      flex-wrap: wrap;
+      text-align: center;
+      align-items: center;
+    }
+  
+    .category-tabs button {
+      margin: 3px 0;
+      padding: 10px 20px;
+      width: 30%;
+    }
+  }
+  
