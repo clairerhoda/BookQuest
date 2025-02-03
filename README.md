@@ -4,6 +4,9 @@
 
 ---
 
+## 🚀 Access
+[BookQuest Live](https://main.d1xf262vqj3vw9.amplifyapp.com)
+
 ## Features
 
 ✅ **Search for Books** – Find books by title, author, or keywords  
@@ -55,7 +58,7 @@ npm install
 
 3️⃣ Start the development server:
 ```sh
-npm run dev
+npm start
 ```
 
 ---
