@@ -37,8 +37,6 @@ const SearchBar = ({ onSearch }) => {
     const searchTerm = inputRef.current.value;
     if (searchTerm.trim()) {
       onSearch(searchTerm);
-      inputRef.current.value = "";
-      inputRef.current.focus();
     }
   };
 
